@@ -30,23 +30,23 @@ const fields: BuilderFieldProps[] = [
     value: [
       {
         label: "Robert Ferguson",
-        value: 1
+        value: "1"
       },
       {
         label: "Theresa Hamilton",
-        value: 2
+        value: "2"
       },
       {
         label: "David Andrews",
-        value: 3
+        value: "3"
       },
       {
         label: "Simon Reid",
-        value: 4
+        value: "4"
       },
       {
         label: "Jane Lowe",
-        value: 5
+        value: "5"
       }
     ]
   },
