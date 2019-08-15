@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial';
+  font-size: 14px;
+  color: #373737;
+  padding: 2rem;
+}
+
+.code {
+  background: #f4f4f4;
+  border: 1px solid #bfbfbf;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 0.7rem;
+}
