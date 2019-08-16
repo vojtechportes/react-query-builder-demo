@@ -1,90 +1,63 @@
 import React from "react";
-import { Builder, BuilderFieldProps } from "@vojtechportes/react-query-builder";
+import { Builder } from "@vojtechportes/react-query-builder";
 import "./App.css";
+import { fields, components as muiComponents } from "./query-builder-config";
 
-const fields: BuilderFieldProps[] = [
-  {
-    field: "ID",
-    label: "ID",
-    type: "NUMBER",
-    operators: [
-      "BETWEEN",
-      "NOT_BETWEEN",
-      "SMALLER",
-      "LARGER",
-      "SMALLER_EQUAL",
-      "LARGER_EQUAL"
-    ]
-  },
-  {
-    field: "NAME",
-    label: "Name",
-    type: "TEXT",
-    operators: ["EQUAL", "NOT_EQUAL"]
-  },
-  {
-    field: "AUTHOR",
-    label: "Author",
-    type: "MULTI_LIST",
-    operators: ["ANY_IN", "ALL_IN", "NOT_IN"],
-    value: [
-      {
-        label: "Robert Ferguson",
-        value: "1"
-      },
-      {
-        label: "Theresa Hamilton",
-        value: "2"
-      },
-      {
-        label: "David Andrews",
-        value: "3"
-      },
-      {
-        label: "Simon Reid",
-        value: "4"
-      },
-      {
-        label: "Jane Lowe",
-        value: "5"
-      }
-    ]
-  },
-  {
-    field: "GENRE",
-    label: "Genre",
-    type: "MULTI_LIST",
-    operators: ["ANY_IN", "ALL_IN", "NOT_IN"],
-    value: [
-      { label: "Fiction", value: "FICTION" },
-      { label: "Crime", value: "CRIME" },
-      { label: "Poetry", value: "POETRY" }
-    ]
-  },
-  {
-    field: "YEAR_PUBLISHED",
-    label: "Year Published",
-    type: "NUMBER",
-    operators: [
-      "EQUAL",
-      "NOT_EQUAL",
-      "BETWEEN",
-      "NOT_BETWEEN",
-      "LARGER",
-      "SMALLER"
-    ]
+import { defaultComponents, colors } from "@vojtechportes/react-query-builder";
+import styled from "styled-components";
+
+const Link = styled.span<{ active: boolean }>`
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem;
+  border-bottom: 1px solid ${({ active }) => active ? colors.primary : colors.darker};
+  color: ${({ active }) => active ? colors.primary : colors.dark};
+
+  :hover {
+    border-bottom: 1px solid ${colors.primary};
   }
-];
+`;
 
 const App: React.FC = () => {
   const initialData: any[] = [];
   const [output, setOutput] = React.useState(initialData);
+  const [components, setComponents] = React.useState(defaultComponents);
+  const [activeSkin, setActiveSkin] = React.useState("defaultComponents");
+
+  const handleLinkClick = (value: string) => {
+    switch (value) {
+      case "defaultComponents":
+        setComponents(defaultComponents);
+        setActiveSkin("defaultComponents");
+        break;
+      case "muiComponents":
+        setComponents(muiComponents);
+        setActiveSkin("muiComponents");
+        break;
+    }
+  };
 
   return (
     <>
+      <p>
+        <Link
+          active={activeSkin === "defaultComponents"}
+          onClick={() => handleLinkClick("defaultComponents")}
+        >
+          Use Query Builder default components
+        </Link>
+        <Link
+          active={activeSkin === "muiComponents"}
+          onClick={() => handleLinkClick("muiComponents")}
+        >
+          Use Material UI components
+        </Link>
+      </p>
+      <br />
       <Builder
         fields={fields}
         data={initialData}
+        components={components}
         onChange={data => setOutput(data)}
       />
       <br />
