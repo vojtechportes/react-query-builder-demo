@@ -7,7 +7,6 @@ import {
 } from "@material-ui/core";
 import { SelectMultiProps } from "@vojtechportes/react-query-builder";
 import React from "react";
-import { difference } from "../utils/difference";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
