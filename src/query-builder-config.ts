@@ -2,14 +2,26 @@ import {
   BuilderFieldProps,
   BuilderComponentsProps
 } from "@vojtechportes/react-query-builder";
-import { Button } from "./components/Button";
-import { DeleteButton } from "./components/DeleteButton";
-import { Component } from "./components/Component";
-import { Input } from "./components/Input";
-import { Select } from "./components/Select";
-import { SelectMulti } from "./components/SelectMulti";
-import { Group } from "./components/Group";
-import { GroupHeaderOption } from "./components/GroupHeaderOption";
+
+import { Button as ButtonMui } from "./components/mui/Button";
+import { DeleteButton as DeleteButtonMui } from "./components/mui/DeleteButton";
+import { Component as ComponentMui } from "./components/mui/Component";
+import { Input as InputMui } from "./components/mui/Input";
+import { Select as SelectMui } from "./components/mui/Select";
+import { SelectMulti as SelectMultiMui } from "./components/mui/SelectMulti";
+import { Group as GroupMui } from "./components/mui/Group";
+import { GroupHeaderOption as GroupHeaderOptionMui } from "./components/mui/GroupHeaderOption";
+
+import { Button as ButtonAntd } from "./components/antd/Button";
+import { DeleteButton as DeleteButtonAntd } from "./components/antd/DeleteButton";
+import { Group as GroupAntd } from "./components/antd/Group"
+
+import { Component as ComponentAntd } from "./components/antd/Component"
+
+import { Input as InputAntd } from "./components/antd/Input";
+import { GroupHeaderOption as GroupHeaderOptionAntd } from "./components/antd/GroupHeaderOption";
+import { Select as SelectAntd } from "./components/antd/Select"
+import { SelectMulti as SelectMultiAntd } from "./components/antd/SelectMulti"
 
 export const fields: BuilderFieldProps[] = [
   {
@@ -85,15 +97,34 @@ export const fields: BuilderFieldProps[] = [
   }
 ];
 
-export const components: BuilderComponentsProps = {
-  Add: Button,
-  Remove: DeleteButton,
-  Component,
-  Group,
-  GroupHeaderOption,
-  form: {
-    Input,
-    Select,
-    SelectMulti
+interface ComponentsProps {
+  mui: BuilderComponentsProps,
+  antd: BuilderComponentsProps
+}
+
+export const components: ComponentsProps = {
+  mui: {
+    Add: ButtonMui,
+    Remove: DeleteButtonMui,
+    Component: ComponentMui,
+    Group: GroupMui,
+    GroupHeaderOption: GroupHeaderOptionMui,
+    form: {
+      Input: InputMui,
+      Select: SelectMui,
+      SelectMulti: SelectMultiMui
+    }
+  },
+  antd: {
+    Add: ButtonAntd,
+    Remove: DeleteButtonAntd,
+    Component: ComponentAntd,
+    Group: GroupAntd,
+    GroupHeaderOption: GroupHeaderOptionAntd,
+    form: {
+      Input: InputAntd,
+      Select: SelectAntd,
+      SelectMulti: SelectMultiAntd
+    }
   }
 };
