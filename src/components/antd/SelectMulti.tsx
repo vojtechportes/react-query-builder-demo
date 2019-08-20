@@ -23,6 +23,7 @@ export const SelectMulti: React.FC<SelectMultiProps> = ({
       style={{ minWidth: 160 }}
       mode="multiple"
       placeholder="Select your option"
+      value={selectedValue}
       onSelect={handleChange}
       onDeselect={handleDelete}
     >
