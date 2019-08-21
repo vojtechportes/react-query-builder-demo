@@ -1547,10 +1547,10 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
-"@vojtechportes/react-query-builder@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@vojtechportes/react-query-builder/-/react-query-builder-0.2.0.tgz#9db532a763750de65d39bb3d210d9a74d769e79b"
-  integrity sha512-qILAB9URQ8QwulCT0gVecweAxSPlMbUmOQRVWbeZmZsQfHPxOGmmLCw+EaPcoGQDCrYc7J8gpHbZfvpf4N+KrA==
+"@vojtechportes/react-query-builder@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@vojtechportes/react-query-builder/-/react-query-builder-0.2.4.tgz#d797b955a81ca0b3d292264bbf6fbb0bf31ec052"
+  integrity sha512-NZnXbAd7+5MUNvYBUahLGlHrlvk4zsMinh+hJw1ILVJRudulBtQyh/lhZ0ZsrxW2t7WZZHG0e1PxZaEd8kw51Q==
   dependencies:
     Builder "^2.8.1"
     styled-components "^4.3.2"
@@ -6668,6 +6668,11 @@ locate-path@^3.0.0:
   dependencies:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
+
+lodash._getnative@^3.0.0:
+  version "3.9.1"
+  resolved "https://registry.yarnpkg.com/lodash._getnative/-/lodash._getnative-3.9.1.tgz#570bc7dede46d61cdcde687d65d3eecbaa3aaff5"
+  integrity sha1-VwvH3t5G1hzc3mh9ZdPuy6o6r/U=
 
 lodash._reinterpolate@^3.0.0:
   version "3.0.0"
