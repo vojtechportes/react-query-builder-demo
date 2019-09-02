@@ -1,6 +1,7 @@
 import React from "react";
 import { InputProps } from "@vojtechportes/react-query-builder";
 import { Input as InputBase, DatePicker } from "antd";
+import moment from 'moment'
 
 export const Input: React.FC<InputProps> = ({ onChange, value, type }) => {
   const handleChange = (
@@ -10,12 +11,12 @@ export const Input: React.FC<InputProps> = ({ onChange, value, type }) => {
   };
 
   const handleChangeDate = (date: any) => {
-    onChange(date)
+    onChange(date.format("YYYY-MM-DD"))
   }
 
   if (type === "date") {
     return (
-      <DatePicker onChange={handleChangeDate} />
+      <DatePicker value={value ? moment(value, 'YYYY-MM-DD') : undefined} onChange={handleChangeDate} />
     )
   } else {
     return (
