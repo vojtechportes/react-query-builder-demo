@@ -1,6 +1,5 @@
 import React from "react";
 import Paper from "@material-ui/core/Paper";
-import { ButtonGroup } from "@material-ui/core";
 import { GroupProps } from "@vojtechportes/react-query-builder";
 import styled from "styled-components";
 
