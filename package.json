@@ -7,7 +7,6 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
-  
     "@material-ui/core": "^4.3.2",
     "@types/jest": "24.0.17",
     "@types/node": "12.7.2",
@@ -15,8 +14,9 @@
     "@types/react-dom": "16.8.5",
     "@types/react-helmet": "^5.0.9",
     "@types/styled-components": "^4.1.18",
-    "@vojtechportes/react-query-builder": "^0.2.4",
+    "@vojtechportes/react-query-builder": "^0.3.0",
     "antd": "^3.22.0",
+    "moment": "^2.24.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
