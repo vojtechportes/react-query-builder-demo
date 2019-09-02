@@ -1547,10 +1547,10 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
-"@vojtechportes/react-query-builder@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@vojtechportes/react-query-builder/-/react-query-builder-0.2.4.tgz#d797b955a81ca0b3d292264bbf6fbb0bf31ec052"
-  integrity sha512-NZnXbAd7+5MUNvYBUahLGlHrlvk4zsMinh+hJw1ILVJRudulBtQyh/lhZ0ZsrxW2t7WZZHG0e1PxZaEd8kw51Q==
+"@vojtechportes/react-query-builder@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@vojtechportes/react-query-builder/-/react-query-builder-0.3.0.tgz#c4a6c1e2d2aacbe1bf23d1315754a794656f2005"
+  integrity sha512-5j9zO74vOuI++BdvXY7/Rnep66Doq8Jpr3gFHaHdw8vbqO1615YiWgOdAe29iYdKbFyi/JU38qoWbkKEgUzhbA==
   dependencies:
     Builder "^2.8.1"
     styled-components "^4.3.2"
